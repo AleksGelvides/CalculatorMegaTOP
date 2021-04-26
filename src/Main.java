@@ -9,9 +9,8 @@ public class Main {
 //
 //                }
             if (TestDataInput.operator == 's') {
-            workProcess = true;
+            workProcess = false;
             }
-
             System.out.println("System: " + workProcess);
         }
     }
