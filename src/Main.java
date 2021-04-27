@@ -1,23 +1,24 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
         boolean workProcess = true;
         boolean calculationProcess;
         while (workProcess == true) {
             calculationProcess = true;
             while (calculationProcess == true){
-                    TestDataInput.inOperator();
-                switch (TestDataInput.operator) {
+                calculation.inPutting();
+                switch (calculation.cOperation) {
                         case 's':
                             workProcess = false;
                             break;
                 }
-                if (TestDataInput.operator == 'c'){
-                    System.out.print("\033[H\033[2J");
-                    System.out.flush();
+                if (calculation.cOperation == 'c'){
+                    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                     calculationProcess = false;}
                 if (!workProcess) {
                     break; }
-                System.out.println("Вы ввели " + TestDataInput.operator);
+//                System.out.println("Вы ввели " + calculation.cOperation);
             }
         }
     }

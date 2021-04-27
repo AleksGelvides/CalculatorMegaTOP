@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CalculatorMegaTOP:jar3">
+    <output-path>$PROJECT_DIR$/out/artifacts/CalculatorMegaTOP_jar3</output-path>
+    <root id="archive" name="CalculatorMegaTOP.jar">
+      <element id="module-output" name="CalculatorMegaTOP" />
+    </root>
+  </artifact>
+</component>
