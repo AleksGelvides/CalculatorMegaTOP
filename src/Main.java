@@ -3,23 +3,22 @@ public class Main {
         boolean workProcess = true;
         boolean calculationProcess = true;
         while (workProcess == true) {
-                while (calculationProcess == true){
+            while (calculationProcess == true){
                     TestDataInput.inOperator();
-                    switch (TestDataInput.operator) {
+                switch (TestDataInput.operator) {
                         case 'c':
                             calculationProcess = false;
+                            break;
                         case 's':
                             workProcess = false;
-                        default:
-                            System.out.println("Решение продолжается");
                             break;
-                    }
-                    if (calculationProcess == false){
-                    System.out.flush();}
-                    if (workProcess  == false) {
-                        break;
-                    }
                 }
+                if (calculationProcess == false){
+                    System.out.flush();}
+                if (workProcess  == false) {
+                    break;
+                }
+            }
         }
     }
 }
