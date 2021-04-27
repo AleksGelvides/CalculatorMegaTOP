@@ -3,15 +3,19 @@ public class Main {
         boolean workProcess = true;
         boolean calculationProcess = true;
         while (workProcess == true) {
-
-//            char sysOff = 's';
-//                while (calculationProcess == true){
-//
-//                }
-            if (TestDataInput.operator == 's') {
-            workProcess = false;
-            }
-            System.out.println("System: " + workProcess);
+                while (calculationProcess == true){
+                    TestDataInput.inOperator();
+                    switch (TestDataInput.operator) {
+                        case 'c':
+                            calculationProcess = false;
+                        case 's':
+                            workProcess = false;
+                        default:
+                            System.out.println("Решение продолжается");
+                            break;
+                    }
+                    System.out.flush();
+                }
         }
     }
 }
