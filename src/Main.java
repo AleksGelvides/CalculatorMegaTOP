@@ -14,7 +14,11 @@ public class Main {
                             System.out.println("Решение продолжается");
                             break;
                     }
-                    System.out.flush();
+                    if (calculationProcess == false){
+                    System.out.flush();}
+                    if (workProcess  == false) {
+                        break;
+                    }
                 }
         }
     }
