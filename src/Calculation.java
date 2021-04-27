@@ -26,7 +26,10 @@ class calculation {
             case '+' -> result = operand1 + operand2;
             case '-' -> result = operand1 - operand2;
             case '*' -> result = operand1 * operand2;
-            case '/' -> result = operand1 / operand2;
+            case '/' -> {
+                if(operand2 == 0) result = 0;
+                else result = operand1 / operand2;
+            }
             default -> System.out.println("Ошибка вычисления");
         }
     return result;
