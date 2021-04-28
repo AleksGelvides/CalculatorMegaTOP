@@ -7,6 +7,7 @@ public class Main {
         while (workProcess == true) {
             calculationProcess = true;
             while (calculationProcess == true){
+                System.out.println("Введите:");
                 calculation.inPutting();
                 switch (calculation.cOperation) {
                         case 's':
@@ -15,6 +16,7 @@ public class Main {
                 }
                 if (calculation.cOperation == 'c'){
                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                    calculation.cOperand1 = 0;
                     calculationProcess = false;}
                 if (calculation.cOperation == 's'){
                     workProcess = false;

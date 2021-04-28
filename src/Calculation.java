@@ -12,9 +12,7 @@ class calculation {
 
             Scanner scanner = new Scanner(System.in);
             if (cOperand1 == 0) {
-                if (scanner.hasNextDouble()) {
-                    operand1 = scanner.nextDouble();
-                } else System.out.println("Неверный первый операнд");}
+                operand1 = scanner.nextDouble();}
             else if (cOperand1 != 0) {
                     operand1 = cOperand1;
                 }
