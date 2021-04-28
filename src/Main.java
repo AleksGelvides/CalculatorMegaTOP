@@ -16,8 +16,9 @@ public class Main {
                 if (calculation.cOperation == 'c'){
                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                     calculationProcess = false;}
-                if (!workProcess) {
-                    break; }
+                if (calculation.cOperation == 's'){
+                    workProcess = false;
+                break;}
 //                System.out.println("Вы ввели " + calculation.cOperation);
             }
         }
